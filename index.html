@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- FourFiftyOne's homepage, last updated June 15, 2021 -->
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="favicon.ico">
+        <title>FourFiftyOne</title>
+        <style>
+            body {
+                background-color: black;
+                font-family: Helvetica, sans-serif;
+                align-items: center;
+            }
+            .center {
+                top: 50%;
+	            left: 50%;
+	            position: fixed;
+	            transform: translate(-50%, -50%);
+	            text-align: center;
+                color: whitesmoke;
+            }
+            img {
+                align-self: center;
+                border-radius: 50%;
+                border: 0.3em solid #00ff00;
+            }
+            .logo {
+                transition: all 1s ease;
+            }
+            .logo:hover {
+                transform: rotate(360deg);
+            }
+            a {
+                text-decoration: none;
+                color: whitesmoke;
+            }
+            h1 {
+                padding-bottom: 0.7em;
+            }
+            h3 {
+                font-size: 1em;
+                line-height: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class=center>
+            <img src="logoAnimated.gif" class="logo" alt="My Logo" style="width:10em;height:10em">
+            <h1>FourFiftyOne</h1>
+            <h3>Internal links</h3>
+            <h2><a href="about">About</a></h2>
+            <h3>External links</h3>
+            <h2 class="external"><a href="https://github.com/360camera">GitHub</a> - <a id="discordLink" onclick="revealDiscord()">Discord</a></h2>
+        </div>
+        <script>
+            function revealDiscord() {
+                document.getElementById("discordLink").innerHTML = "FourFiftyOne#5204";
+                document.getElementById("discordLink").removeAttribute("onclick");
+            }
+        </script>
+    </body>
+</html>
